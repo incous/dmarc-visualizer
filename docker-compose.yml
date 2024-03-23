@@ -15,7 +15,7 @@ services:
     environment:
       - discovery.type=single-node
     volumes:
-      - elastic_data:/usr/share/elasticsearch/data
+      - ./elastic_data:/usr/share/elasticsearch/data
 
   grafana:
     build: ./grafana/
