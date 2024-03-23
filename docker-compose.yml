@@ -14,6 +14,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.5
     environment:
       - discovery.type=single-node
+    user: root
     volumes:
       - ./elastic_data:/usr/share/elasticsearch/data
 
