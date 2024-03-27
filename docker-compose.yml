@@ -16,7 +16,7 @@ services:
       - discovery.type=single-node
     user: root
     volumes:
-      - ./elastic_data:/var/lib/elasticsearch/data
+      - elastic_data:/usr/share/elasticsearch/data
 
   grafana:
     build: ./grafana/
