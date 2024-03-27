@@ -5,5 +5,5 @@ RUN apk add --update --no-cache --virtual .build_deps build-base libffi-dev \
     && pip install parsedmarc \
     && apk del .build_deps
 
-COPY parsedmarc.sample.ini /
+COPY parsedmarc.ini /
 #COPY GeoLite2-Country.mmdb /usr/share/GeoIP/GeoLite2-Country.mmdb

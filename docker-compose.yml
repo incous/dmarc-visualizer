@@ -3,9 +3,9 @@ services:
   parsedmarc:
     build: ./parsedmarc/
     volumes:
-      - ./files:/input:ro
-      - ./output_files:/output
-    command: parsedmarc -c /parsedmarc.sample.ini /input/* --debug
+      - ./input:/input:ro
+      - ./output:/output
+    command: parsedmarc -c /parsedmarc.ini /input/* --debug
     depends_on:
       - elasticsearch
     restart: on-failure
